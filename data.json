@@ -2,52 +2,59 @@
     "products": [
         {
             "id": 1,
-            "name": "Samsung S5",
-            "price": 1000,
-            "imageUrl": "1.jpg",
-            "description": "Kötü telefon"
+            "name": "Apple iPhone 16 Pro",
+            "price": 82399,
+            "imageUrl": "iphone-16-pro.jpg",
+            "description": "Şimdiye kadarki en iyi iPhone.",
+            "category": "Telefon"
         },
         {
             "id": 2,
-            "name": "Samsung S6",
-            "price": 1500,
-            "imageUrl": "2.jpg",
-            "description": "İdare eder"
+            "name": "Apple iPhone 16",
+            "price": 59799,
+            "imageUrl": "iphone-16.jpg",
+            "description": "Her yönü çok güçlü.",
+            "category": "Telefon"
         },
         {
             "id": 3,
-            "name": "Samsung S7",
-            "price": 2000,
-            "imageUrl": "3.jpg",
-            "description": "Fiyat performans"
+            "name": "Apple iPhone 15 Pro",
+            "price": 76999,
+            "imageUrl": "iphone-15-pro.jpg",
+            "description": "Çok yetenekli. Her zamanki gibi.",
+            "category": "Telefon"
         },
         {
             "id": 4,
-            "name": "Samsung S8",
-            "price": 2300,
-            "imageUrl": "4.jpg",
-            "description": "Ortalama"
+            "name": "Apple iPhone 15",
+            "price": 51199,
+            "imageUrl": "iphone-15.jpg",
+            "description": "Çok yetenekli. Her zamanki gibi.",
+            "category": "Telefon"
         },
         {
             "id": 5,
-            "name": "Samsung S9",
-            "price": 2700,
-            "imageUrl": "5.jpg",
-            "description": "Üst segment"
+            "name": "Apple iPhone 14 Pro",
+            "price": 73999,
+            "imageUrl": "iphone-14-pro.jpg",
+            "description": "Her yönüyle muhteşem.",
+            "category": "Telefon"
         },
         {
             "id": 6,
-            "name": "Samsung S10",
-            "price": 3000,
-            "imageUrl": "6.jpg",
-            "description": "Harika telefon"
+            "name": "Apple iPhone 14",
+            "price": 43199,
+            "imageUrl": "iphone-14.jpg",
+            "description": "Her yönüyle muhteşem.",
+            "category": "Bilgisayar"
         },
         {
             "id": 7,
-            "name": "Samsung S11",
-            "price": 3500,
-            "imageUrl": "7.jpg",
-            "description": "Süper telefon"
+            "name": "Apple iPhone 13 Pro",
+            "price": 53400,
+            "imageUrl": "iphone-13-pro.jpg",
+            "description": "Süper telefon",
+            "category": "Bilgisayar"
         }
     ],
     "categories": [

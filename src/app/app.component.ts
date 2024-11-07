@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { ShopComponent } from './shop/shop.component';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'root',
   standalone: true,
-  imports: [RouterOutlet],
-  template: `<div class="bg-primary m-5 p-5">
-                Shop Application
-            </div>`,
+  imports: [RouterOutlet, ShopComponent, HttpClientModule, CommonModule],
+  templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
