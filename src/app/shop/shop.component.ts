@@ -6,22 +6,27 @@ import { Category } from '../model/category.model';
 import { NavbarComponent } from "./navbar/navbar.component";
 import { NgFor } from '@angular/common';
 import { PriceFormatPipe } from '../price-format.pipe';
+import { Cart } from '../model/cart.model';
+import { CartSummaryComponent } from "./cart-summary/cart-summary.component";
 
 @Component({
   selector: 'shop',
   standalone: true,
-  imports: [NavbarComponent, NgFor, PriceFormatPipe],
+  imports: [NavbarComponent, NgFor, PriceFormatPipe, CartSummaryComponent, CartSummaryComponent],
   templateUrl: './shop.component.html',
   styleUrl: './shop.component.css'
 })
 
 export class ShopComponent {
   public selectedCategory: Category | null = null;
-  public productsPerPage = 3;
+  public productsPerPage = 6;
   public selectedPage = 1;
 
-  constructor(private productRepository: ProductRepository,
-    private categoryRepository: CategoryRepository) { }
+  constructor(
+    private productRepository: ProductRepository,
+    private categoryRepository: CategoryRepository,
+    private cart: Cart
+  ) { }
 
   get products(): Product[] {
     let index = (this.selectedPage - 1) * (this.productsPerPage);
@@ -47,5 +52,9 @@ export class ShopComponent {
 
   changePage(p: number) {
     this.selectedPage = p;
+  }
+
+  addProductToCart(product: Product) {
+    this.cart.addItem(product);
   }
 }
