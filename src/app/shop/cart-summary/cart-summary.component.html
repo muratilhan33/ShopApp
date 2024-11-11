@@ -1,7 +1,9 @@
 <div class="alert alert-success">
     <span *ngIf="cart.itemCount>0">
         Sepetinizde {{cart.itemCount}} adet ürün bulunmaktadır.<br>
-        Toplam {{cart.total| priceFormat}}
+        Toplam {{cart.total| priceFormat}}<br>
+        <button class="btn btn-primary mt-3" [routerLink]="['/cart']" routerLinkActive="router-link-active">Sepete
+            git</button>
     </span>
     <span *ngIf="cart.itemCount==0">Sepetinizde henüz ürün bulunmamaktadır.</span>
 </div>

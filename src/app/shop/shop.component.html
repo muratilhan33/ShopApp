@@ -6,10 +6,12 @@
             <cart-summary></cart-summary>
 
             <div class="list-group">
-                <a href="#" (click)="changeCategory()" class="list-group-item list-group-item-action">Tüm
-                    kategoriler</a>
-                <a href="#" *ngFor="let category of categories" class="list-group-item list-group-item-action"
-                    (click)="changeCategory(category)" [class.active]="category==selectedCategory">{{category.name}}</a>
+                <button (click)="changeCategory()" class="list-group-item list-group-item-action">
+                    Tüm kategoriler
+                </button>
+                <button *ngFor="let category of categories" class="list-group-item list-group-item-action"
+                    (click)="changeCategory(category)"
+                    [class.active]="category==selectedCategory">{{category.name}}</button>
             </div>
         </div>
         <div class="col-9">

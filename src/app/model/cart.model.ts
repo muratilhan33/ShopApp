@@ -38,6 +38,11 @@ export class Cart {
         if (item != undefined) {
             item.quantity = quantity;
         }
+
+        if (quantity == 0) {        // quantity 0 ise ürünü listeden sil
+            this.removeItem(product.id!);
+        }
+
         this.calculate();
     }
 
