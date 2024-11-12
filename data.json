@@ -55,6 +55,62 @@
       "imageUrl": "iphone-13-pro.jpg",
       "description": "Süper telefon",
       "category": "Bilgisayar"
+    },
+    {
+      "id": "8",
+      "name": "Apple iPhone 16 Pro",
+      "price": 82399,
+      "imageUrl": "iphone-16-pro.jpg",
+      "description": "Şimdiye kadarki en iyi iPhone.",
+      "category": "Telefon"
+    },
+    {
+      "id": "9",
+      "name": "Apple iPhone 16",
+      "price": 59799,
+      "imageUrl": "iphone-16.jpg",
+      "description": "Her yönü çok güçlü.",
+      "category": "Telefon"
+    },
+    {
+      "id": "10",
+      "name": "Apple iPhone 15 Pro",
+      "price": 76999,
+      "imageUrl": "iphone-15-pro.jpg",
+      "description": "Çok yetenekli. Her zamanki gibi.",
+      "category": "Telefon"
+    },
+    {
+      "id": "11",
+      "name": "Apple iPhone 15",
+      "price": 51199,
+      "imageUrl": "iphone-15.jpg",
+      "description": "Çok yetenekli. Her zamanki gibi.",
+      "category": "Telefon"
+    },
+    {
+      "id": "12",
+      "name": "Apple iPhone 14 Pro",
+      "price": 73999,
+      "imageUrl": "iphone-14-pro.jpg",
+      "description": "Her yönüyle muhteşem.",
+      "category": "Telefon"
+    },
+    {
+      "id": "13",
+      "name": "Apple iPhone 14",
+      "price": 43199,
+      "imageUrl": "iphone-14.jpg",
+      "description": "Her yönüyle muhteşem.",
+      "category": "Bilgisayar"
+    },
+    {
+      "id": "14",
+      "name": "Apple iPhone 13 Pro",
+      "price": 53400,
+      "imageUrl": "iphone-13-pro.jpg",
+      "description": "Süper telefon",
+      "category": "Bilgisayar"
     }
   ],
   "categories": [
