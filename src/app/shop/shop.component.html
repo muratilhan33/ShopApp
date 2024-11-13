@@ -20,7 +20,7 @@
                     <div class="alert alert-warning">
                         <div class="form-inline float-end m-0 p-0">
                             Görüntülenen ürün sayısı <select class="form-control-sm" [value]="productsPerPage"
-                                (change)="changePageSize($any($event.target).value)">
+                                (change)="changePageSize($event.target)">
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                                 <option value="4">4</option>

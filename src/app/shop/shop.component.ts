@@ -42,8 +42,10 @@ export class ShopComponent {
   }
 
   get products(): Product[] {
-    return this.selectedProducts
-      .slice(((this.selectedPage - 1) * (this.productsPerPage)), ((this.selectedPage - 1) * (this.productsPerPage)) + this.productsPerPage);
+    const startIndex = (this.selectedPage - 1) * this.productsPerPage;
+    const endIndex = startIndex + this.productsPerPage;
+
+    return this.selectedProducts.slice(startIndex, endIndex);
   }
 
   get pageNumbers(): number[] {
@@ -55,30 +57,29 @@ export class ShopComponent {
   }
 
   get categories(): Category[] {
+    this.updateSelectedProducts();
     return this.categoryRepository.getCategories();
   }
 
   changeCategory(newCategory?: Category) {
+    this.selectedCategory = newCategory || null; // Eğer kategori yoksa tüm ürünleri göster
     this.updateSelectedProducts();
-    this.selectedCategory = newCategory!;
     this.changePage(1);
   }
 
   changePage(p: number) {
-    this.updateSelectedProducts();
     this.selectedPage = p;
-    console.log('page ' + p);
-    console.log('selected category ' + this.selectedCategory?.name);
-    console.log('prodcuts per page ' + this.productsPerPage);
+    this.updateSelectedProducts();
   }
 
   addProductToCart(product: Product) {
     this.cart.addItem(product);
   }
 
-  changePageSize(size: number) {
-    this.productsPerPage = size;
+  changePageSize(size: any) {
+    this.productsPerPage = +size.value;
     this.changePage(1);
+    this.updateSelectedProducts();
   }
 
 }
