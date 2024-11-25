@@ -23,4 +23,19 @@ export class CategoryRepository implements OnInit {
     getCategories(): Category[] {
         return this.categories;
     }
-}
+
+    saveCategory(category: Category) {
+        if (category.id == null || category.id == 0) {
+            this.restService.addCategory(category)
+                .subscribe(c => this.categories.push(category));
+        } else {
+            this.restService.updateCategory(category)
+                .subscribe(c => this.categories.splice(this.categories.findIndex(p => p.id == category.id), 1, category));
+        }
+    }
+
+    deleteCategory(category: Category) {
+        this.restService.deleteCategory(category)
+            .subscribe(c => this.categories.splice(this.categories.findIndex(c => c.id == category.id), 1));
+    }
+}  

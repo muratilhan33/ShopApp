@@ -1,0 +1,16 @@
+<h5>
+    {{editing ? "Edit" : "Create"}} Category
+</h5>
+
+<form #form="ngForm" (ngSubmit)="save(form)">
+    <div class="form-group">
+        <label>Name</label>
+        <input class="form-control" name="name" [(ngModel)]="category.name">
+    </div>
+
+
+    <button type="submit" class="btn btn-primary mt-2">
+        {{editing ? "Edit" : "Create" }} Category
+    </button>
+    <button class="btn btn-outline-primary mt-2" routerLink="/admin/main/products">Cancel</button>
+</form>

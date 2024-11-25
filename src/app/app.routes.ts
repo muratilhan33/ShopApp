@@ -7,5 +7,6 @@ export const routes: Routes = [
     { path: 'shop', component: ShopComponent },
     { path: 'cart', component: CartDetailComponent },
     { path: 'checkout', component: CheckoutComponent },
+    { path: 'admin', loadChildren: () => import('./admin/admin-routing.module').then(m => m.AdminRoutingModule) },
     { path: '**', redirectTo: "/shop" }
 ];

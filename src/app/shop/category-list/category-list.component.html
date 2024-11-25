@@ -1,0 +1,7 @@
+<div class="list-group">
+    <button (click)="changeCategory()" class="list-group-item list-group-item-action">
+        Tüm kategoriler
+    </button>
+    <button *ngFor="let category of categories" class="list-group-item list-group-item-action"
+        (click)="changeCategory(category)" [class.active]="category==selectedCategory">{{category.name}}</button>
+</div>

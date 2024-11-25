@@ -1,0 +1,32 @@
+<div class="row border m-0 p-3 mb-4" *ngIf="selectedProduct">
+    <div class="col-md-2">
+        <img class="img-fluid" src="/assets/img/{{selectedProduct.imageUrl}}" alt="{{selectedProduct.name}}"
+            class="w-50 mx-auto">
+    </div>
+    <div class="col-md-10">
+        <h5 class="card-title">{{selectedProduct.name}}</h5>
+        <p class="card-text mt-2">{{selectedProduct.description}} </p>
+        <button class="btn btn-danger btn-sm " (click)="hideDetails()">İptal</button>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-4" *ngFor="let p of products">
+        <div class="card mb-3">
+            <img src="/assets/img/{{p.imageUrl}}" alt="{{p.name}}" class="w-50 mx-auto">
+            <div class="card-body">
+                <h4 class="card-title">
+                    <a href="" class="product-link text-secondary">{{p.name}}</a>
+                </h4>
+                <small class="text-muted">{{p.price! |priceFormat}}
+                </small>
+            </div>
+            <div class="card-footer text-center">
+                <button class="btn btn-outline-primary btn-sm" (click)="displayDetails(p)">Details</button>
+                <button class="btn btn-outline-primary btn-sm ms-3" (click)="addProductToCart(p)">Add to
+                    Cart</button>
+            </div>
+        </div>
+    </div>
+</div>

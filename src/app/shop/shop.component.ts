@@ -1,40 +1,41 @@
-import { Component, NgModule } from '@angular/core';
+import { Component, NgModule, OnInit } from '@angular/core';
 import { ProductRepository } from '../model/product.repository';
 import { CategoryRepository } from '../model/category.repository';
 import { Product } from '../model/product.model';
 import { Category } from '../model/category.model';
 import { NavbarComponent } from "./navbar/navbar.component";
 import { NgFor } from '@angular/common';
-import { PriceFormatPipe } from '../price-format.pipe';
 import { Cart } from '../model/cart.model';
 import { CartSummaryComponent } from "./cart-summary/cart-summary.component";
 import { FormsModule } from '@angular/forms';
+import { ProductListComponent } from "./product-list/product-list.component";
+import { CategoryListComponent } from "./category-list/category-list.component";
 
 @Component({
   selector: 'shop',
   standalone: true,
-  imports: [NavbarComponent, NgFor, PriceFormatPipe, CartSummaryComponent, CartSummaryComponent, FormsModule],
+  imports: [NavbarComponent, NgFor, CartSummaryComponent, CartSummaryComponent, FormsModule, ProductListComponent, CategoryListComponent],
   templateUrl: './shop.component.html',
   styleUrl: './shop.component.css'
 })
 
-export class ShopComponent {
+export class ShopComponent implements OnInit {
   public selectedCategory: Category | null = null;
   public productsPerPage = 6;
   public selectedPage = 1;
   public selectedProducts: Product[] = []; // Aktif sayfadaki ürünler
 
   constructor(
-    private productRepository: ProductRepository,
-    private categoryRepository: CategoryRepository,
-    private cart: Cart
+    private productRepository: ProductRepository
   ) {
 
   }
 
   ngOnInit(): void {
     this.updateSelectedProducts();
-    this.changeCategory();
+    this.productRepository.products$.subscribe(() => {
+      this.updateSelectedProducts();
+    })
   }
 
   updateSelectedProducts(): void {
@@ -56,30 +57,19 @@ export class ShopComponent {
       .map((a, i) => i + 1)
   }
 
-  get categories(): Category[] {
-    this.updateSelectedProducts();
-    return this.categoryRepository.getCategories();
-  }
-
-  changeCategory(newCategory?: Category) {
-    this.selectedCategory = newCategory || null; // Eğer kategori yoksa tüm ürünleri göster
-    this.updateSelectedProducts();
-    this.changePage(1);
-  }
-
   changePage(p: number) {
     this.selectedPage = p;
     this.updateSelectedProducts();
-  }
-
-  addProductToCart(product: Product) {
-    this.cart.addItem(product);
   }
 
   changePageSize(size: any) {
     this.productsPerPage = +size.value;
     this.changePage(1);
     this.updateSelectedProducts();
+  }
+
+  getCategory(category: Category) {
+    this.selectedCategory = category;
   }
 
 }

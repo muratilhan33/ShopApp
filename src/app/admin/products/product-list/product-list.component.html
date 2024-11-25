@@ -1,0 +1,32 @@
+<div *ngIf="isLoading" class="loading-overlay">
+    <div class="loader"></div>
+    <span class="loading ms-2">Loading...</span>
+
+</div>
+
+<button [hidden]="isLoading" class="btn btn-primary" routerLink="/admin/main/products/create">Yeni Ürün</button>
+<table [hidden]="isLoading" class="table table-hover table-striped">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Name</th>
+            <th>Price</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of getProducts()">
+            <td>
+                <img src="/assets/img/{{item.imageUrl}}" alt="{{item.name}}" class="w-25 mx-auto" (load)="onImageLoad()"
+                    [class.product-image-loaded]="true">
+            </td>
+            <td>{{item.name}}</td>
+            <td>{{item.price! | priceFormat}}</td>
+            <td>
+                <button class="btn btn-warning" [routerLink]="['/admin/main/products/edit',item.id]"
+                    routerLinkActive="router-link-active">Edit</button>
+                <button class="btn btn-danger ms-2" (click)="deleteProduct(item)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

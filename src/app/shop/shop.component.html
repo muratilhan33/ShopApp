@@ -5,14 +5,7 @@
 
             <cart-summary></cart-summary>
 
-            <div class="list-group">
-                <button (click)="changeCategory()" class="list-group-item list-group-item-action">
-                    Tüm kategoriler
-                </button>
-                <button *ngFor="let category of categories" class="list-group-item list-group-item-action"
-                    (click)="changeCategory(category)"
-                    [class.active]="category==selectedCategory">{{category.name}}</button>
-            </div>
+            <category-list (category)="getCategory($event)"></category-list>
         </div>
         <div class="col-9">
             <div class="row">
@@ -31,25 +24,8 @@
                         {{selectedProducts.length}} tane ürün bulundu.
                     </div>
                 </div>
-                <ng-container *ngFor="let p of products">
-                    <div class="col-md-4">
-                        <div class="card mb-3">
-                            <img src="/assets/img/{{p.imageUrl}}" alt="{{p.name}}" class="w-50 mx-auto">
-                            <div class="card-body">
-                                <h4 class="card-title">
-                                    <a href="" class="product-link text-secondary">{{p.name}}</a>
-                                </h4>
-                                <small class="text-muted">{{p.price! |priceFormat}}
-                                </small>
-                            </div>
-                            <div class="card-footer text-center">
-                                <button class="btn btn-outline-primary btn-sm">Details</button>
-                                <button class="btn btn-outline-primary btn-sm ms-3" (click)="addProductToCart(p)">Add to
-                                    Cart</button>
-                            </div>
-                        </div>
-                    </div>
-                </ng-container>
+
+                <product-list [products]="products"></product-list>
             </div>
             <div class="row mt-3">
                 <div class="col">

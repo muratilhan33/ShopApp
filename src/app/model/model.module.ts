@@ -5,10 +5,11 @@ import { CategoryRepository } from "./category.repository";
 import { ProductRepository } from "./product.repository";
 import { Cart } from "./cart.model";
 import { OrderRepository } from "./order.repository";
+import { AuthService } from "./auth.service";
 
 @NgModule({
     imports: [HttpClientModule],
-    providers: [RestService, CategoryRepository, ProductRepository, Cart, OrderRepository]
+    providers: [RestService, CategoryRepository, ProductRepository, Cart, OrderRepository, AuthService]
 })
 
 export class ModelModule {

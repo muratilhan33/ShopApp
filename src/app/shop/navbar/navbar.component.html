@@ -3,39 +3,30 @@
         <a [routerLink]="['/shop']" class="navbar-brand">ShopApp</a>
         <ul class="navbar-nav me-auto">
             <li class="navbar-nav">
-                <a [routerLink]="['/shop']" routerLinkActive="router-link-active" class="nav-link active">Home</a>
+                <a [routerLink]="['/shop']" routerLinkActive="router-link-active" class="nav-link">Home</a>
             </li>
             <li class="navbar-nav">
-                <a href="" class="nav-link">Products</a>
+                <a [routerLink]="['/shop']" class="nav-link" routerLinkActive="active">Products</a>
+            </li>
+            <li class="navbar-nav nav-item">
+                <a [routerLink]="['/cart']" routerLinkActive="active-link" class="nav-link">Cart</a>
             </li>
             <li class="navbar-nav">
-                <a [routerLink]="['/cart']" class="nav-link">Cart</a>
+                <a href="#shop" class="nav-link" routerLinkActive="active">Orders</a>
             </li>
             <li class="navbar-nav">
-                <a href="" class="nav-link">Orders</a>
-            </li>
-            <li class="navbar-nav">
-                <a href="" class="nav-link">Add Product</a>
-            </li>
-            <li class="navbar-nav">
-                <a href="" class="nav-link">Admin Products</a>
-            </li>
-            <li class="navbar-nav">
-                <a href="" class="nav-link">Add Category</a>
-            </li>
-            <li class="navbar-nav">
-                <a href="" class="nav-link">Categories</a>
+                <a routerLink="/admin/main" class="nav-link">Admin</a>
             </li>
         </ul>
         <ul class="navbar-nav ms-auto">
             <li class="navbar-nav">
-                <a href="" class="nav-link">Login</a>
+                <a href="#" *ngIf="!isLoggedIn" class="nav-link">Login</a>
             </li>
             <li class="navbar-nav">
-                <a href="" class="nav-link">Register</a>
+                <a href="#" *ngIf="!isLoggedIn" class="nav-link">Register</a>
             </li>
             <li class="navbar-nav">
-                <a href="" class="nav-link">Logout</a>
+                <a href="#" *ngIf="isLoggedIn" class="nav-link">Logout</a>
             </li>
         </ul>
     </div>
