@@ -1,0 +1,15 @@
+@media (max-width: 1200px) {
+    #list-products {
+        flex: 0 0 50%;
+        /* Kolon genişliği: %50 (1/2) */
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    #list-products {
+        flex: 0 0 100%;
+        /* Kolon genişliği: %50 (1/2) */
+        max-width: 100%;
+    }
+}
