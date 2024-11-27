@@ -4,11 +4,12 @@ import { PriceFormatPipe } from '../../price-format.pipe';
 import { Product } from '../../model/product.model';
 import { Cart } from '../../model/cart.model';
 import { ProductRepository } from '../../model/product.repository';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'product-list',
   standalone: true,
-  imports: [NgFor, PriceFormatPipe, NgIf],
+  imports: [NgFor, PriceFormatPipe, NgIf, RouterLink],
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.css'
 })
@@ -26,7 +27,7 @@ export class ProductListComponent {
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
-    this.products = this.productRepository.getProducts(null);
+    // this.products = this.productRepository.getProducts(null);
   }
 
   addProductToCart(product: Product) {

@@ -1,16 +1,13 @@
-import { Component, NgModule, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ProductRepository } from '../model/product.repository';
-import { CategoryRepository } from '../model/category.repository';
 import { Product } from '../model/product.model';
 import { Category } from '../model/category.model';
 import { NavbarComponent } from "./navbar/navbar.component";
 import { NgFor } from '@angular/common';
-import { Cart } from '../model/cart.model';
 import { CartSummaryComponent } from "./cart-summary/cart-summary.component";
 import { FormsModule } from '@angular/forms';
 import { ProductListComponent } from "./product-list/product-list.component";
 import { CategoryListComponent } from "./category-list/category-list.component";
-
 @Component({
   selector: 'shop',
   standalone: true,
@@ -26,10 +23,7 @@ export class ShopComponent implements OnInit {
   public selectedProducts: Product[] = []; // Aktif sayfadaki ürünler
 
   constructor(
-    private productRepository: ProductRepository
-  ) {
-
-  }
+    private productRepository: ProductRepository) { }
 
   ngOnInit(): void {
     this.updateSelectedProducts();
@@ -45,7 +39,7 @@ export class ShopComponent implements OnInit {
   get products(): Product[] {
     const startIndex = (this.selectedPage - 1) * this.productsPerPage;
     const endIndex = startIndex + this.productsPerPage;
-
+    console.log(this.selectedProducts.slice(startIndex, endIndex))
     return this.selectedProducts.slice(startIndex, endIndex);
   }
 

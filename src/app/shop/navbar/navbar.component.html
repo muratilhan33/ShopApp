@@ -11,19 +11,19 @@
             <li class="navbar-nav nav-item">
                 <a [routerLink]="['/cart']" routerLinkActive="active-link" class="nav-link">Cart</a>
             </li>
-            <li class="navbar-nav">
+            <!-- <li class="navbar-nav">
                 <a href="#shop" class="nav-link" routerLinkActive="active">Orders</a>
             </li>
             <li class="navbar-nav">
                 <a routerLink="/admin/main" class="nav-link">Admin</a>
-            </li>
+            </li> -->
         </ul>
         <ul class="navbar-nav ms-auto">
             <li class="navbar-nav">
-                <a href="#" *ngIf="!isLoggedIn" class="nav-link">Login</a>
+                <a routerLink="/admin/main" class="nav-link">Login</a>
             </li>
             <li class="navbar-nav">
-                <a href="#" *ngIf="!isLoggedIn" class="nav-link">Register</a>
+                <a routerLink="" *ngIf="!isLoggedIn" class="nav-link">Register</a>
             </li>
             <li class="navbar-nav">
                 <a href="#" *ngIf="isLoggedIn" class="nav-link">Logout</a>

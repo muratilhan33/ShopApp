@@ -17,15 +17,14 @@
             <img src="/assets/img/{{p.imageUrl}}" alt="{{p.name}}" class="w-50 mx-auto">
             <div class="card-body">
                 <h4 class="card-title">
-                    <a href="" class="product-link text-secondary">{{p.name}}</a>
+                    <a routerLink="" (click)="displayDetails(p)" class="product-link text-black">{{p.name}}</a>
                 </h4>
                 <small class="text-muted">{{p.price! |priceFormat}}
                 </small>
             </div>
             <div class="card-footer text-center">
-                <button class="btn btn-outline-primary btn-sm" (click)="displayDetails(p)">Details</button>
-                <button class="btn btn-outline-primary btn-sm ms-3" (click)="addProductToCart(p)">Add to
-                    Cart</button>
+                <button class="btn btn-outline-primary btn-sm" (click)="displayDetails(p)">Ürünü incele</button>
+                <button class="btn btn-outline-primary btn-sm ms-3" (click)="addProductToCart(p)">Sepete ekle</button>
             </div>
         </div>
     </div>

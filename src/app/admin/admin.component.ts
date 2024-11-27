@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../model/auth.service';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
+import { NavbarComponent } from "../shop/navbar/navbar.component";
 
 @Component({
   selector: 'app-admin',
   standalone: true,
-  imports: [RouterLink, RouterOutlet],
+  imports: [RouterLink, RouterOutlet, NavbarComponent],
   templateUrl: './admin.component.html',
   styleUrl: './admin.component.css'
 })

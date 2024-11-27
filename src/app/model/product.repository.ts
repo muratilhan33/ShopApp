@@ -27,10 +27,12 @@ export class ProductRepository {
   }
 
   getProducts(category: Category | null): Product[] {
-    if (category)
+    if (category) {
       return this.products.filter(p => p.category == category?.name);
-    else
+    }
+    else {
       return this.products;
+    }
   }
 
   saveProduct(product: Product) {

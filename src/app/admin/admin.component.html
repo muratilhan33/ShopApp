@@ -1,3 +1,4 @@
+<navbar></navbar>
 <div class="container-fluid">
     <div class="row">
         <div class="col bg-primary p-2 text-white">Admin Panel</div>
@@ -6,15 +7,12 @@
     <div class="container">
         <div class="row mt-5">
             <div class="col-3">
-                <button routerLink="/shop" class="btn btn-outline-info w-100">Shop</button>
                 <button routerLinkActive="active" routerLink="/admin/main/products"
                     class="btn btn-outline-info w-100">Products</button>
                 <button routerLinkActive="active" routerLink="/admin/main/categories"
                     class="btn btn-outline-info w-100">Categories</button>
                 <button routerLinkActive="active" routerLink="/admin/main/orders"
                     class="btn btn-outline-info w-100">Orders</button>
-                <button routerLinkActive="active" routerLink="/admin/auth" class="btn btn-outline-info w-100">Go
-                    To Auth</button>
                 <button class="btn btn-outline-danger w-100 mt-2" (click)="logout()">Logout</button>
             </div>
             <div class="col-9">
