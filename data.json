@@ -124,7 +124,7 @@
     },
     {
       "id": "3",
-      "name": "Elektronic"
+      "name": "Elektronik"
     }
   ],
   "orders": [
@@ -152,6 +152,32 @@
         ],
         "itemCount": 1,
         "total": 82399
+      }
+    },
+    {
+      "id": 1,
+      "name": "DSAdas",
+      "address": "dsadsa",
+      "city": "urfa",
+      "phone": "342432",
+      "email": "asdasd",
+      "isSent": false,
+      "cart": {
+        "items": [
+          {
+            "product": {
+              "id": "4",
+              "name": "Apple iPhone 15",
+              "price": 51199,
+              "imageUrl": "iphone-15.jpg",
+              "description": "Çok yetenekli. Her zamanki gibi.",
+              "category": "Telefon"
+            },
+            "quantity": "115"
+          }
+        ],
+        "itemCount": "0115",
+        "total": 5887885
       }
     }
   ]
