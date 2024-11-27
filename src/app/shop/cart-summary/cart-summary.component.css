@@ -3,3 +3,9 @@
         display: none !important;
     }
 }
+
+#cartSummary {
+    background-color: var(--color-secondary-light);
+    border-color: var(--color-secondary-light);
+    color: var(--color-paragraph);
+}

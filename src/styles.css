@@ -5,4 +5,9 @@
 
 html {
     overflow-y: scroll;
+    background-color: var(--color-background);
+}
+
+body {
+    background-color: var(--color-background) !important;
 }

@@ -26,3 +26,38 @@
         padding-left: 0px;
     }
 }
+
+#product-info {
+    background-color: var(--color-secondary-light) !important;
+}
+
+.card {
+    background-color: var(--color-card-background) !important;
+    border-color: var(--color-card-background);
+}
+
+.product-name {
+    color: var(--color-headline) !important;
+}
+
+.product-price {
+    color: var(--color-paragraph) !important;
+}
+
+button {
+    background-color: var(--color-button) !important;
+    color: var(--color-main);
+}
+
+button:hover {
+    background-color: var(--color-main) !important;
+    color: var(--color-button);
+}
+
+.hide-details {
+    background-color: var(--color-tertiary) !important;
+}
+
+.product-description {
+    color: var(--color-paragraph);
+}

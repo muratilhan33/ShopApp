@@ -4,3 +4,15 @@
         max-width: 100% !important;
     }
 }
+
+.navbar {
+    background-color: var(--color-background) !important;
+    color: var(--color-headline) !important;
+}
+
+a {
+    background-color: var(--color-background) !important;
+    color: var(--color-headline) !important;
+}
+
+#hamburger {}

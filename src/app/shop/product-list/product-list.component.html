@@ -1,12 +1,12 @@
-<div class="row border m-0 p-3 mb-4" *ngIf="selectedProduct">
+<div id="product-info" class="row border m-0 p-3 mb-4" *ngIf="selectedProduct">
     <div class="col-md-2">
         <img class="img-fluid" src="/assets/img/{{selectedProduct.imageUrl}}" alt="{{selectedProduct.name}}"
             class="w-50 mx-auto">
     </div>
     <div class="col-md-10">
         <h5 class="card-title">{{selectedProduct.name}}</h5>
-        <p class="card-text mt-2">{{selectedProduct.description}} </p>
-        <button class="btn btn-danger btn-sm " (click)="hideDetails()">İptal</button>
+        <p class="card-text mt-2 product-description">{{selectedProduct.description}} </p>
+        <button class="btn btn-sm hide-details" (click)="hideDetails()">İptal</button>
     </div>
 </div>
 
@@ -14,17 +14,17 @@
 <div class="row list-products">
     <div id="list-products" class="col-md-4" *ngFor="let p of products">
         <div class="card mb-3 margin-product">
-            <img src="/assets/img/{{p.imageUrl}}" alt="{{p.name}}" class="w-50 mx-auto image-product">
+            <img src="/assets/img/{{p.imageUrl}}" alt="{{p.name}}" class="w-50 mx-auto image-product pt-2">
             <div class="card-body">
                 <h4 class="card-title">
-                    <a routerLink="" (click)="displayDetails(p)" class="product-link text-black">{{p.name}}</a>
+                    <a routerLink="" (click)="displayDetails(p)" class="product-link product-name">{{p.name}}</a>
                 </h4>
-                <small class="text-muted">{{p.price! |priceFormat}}
+                <small class="product-price">{{p.price! |priceFormat}}
                 </small>
             </div>
             <div class="card-footer text-center">
-                <button class="btn btn-outline-primary btn-sm" (click)="displayDetails(p)">Ürünü incele</button>
-                <button class="btn btn-outline-primary btn-sm ms-3" (click)="addProductToCart(p)">Sepete ekle</button>
+                <button class="btn btn-sm view-product" (click)="displayDetails(p)">Ürünü incele</button>
+                <button class="btn btn-sm ms-3 add-to-cart" (click)="addProductToCart(p)">Sepete ekle</button>
             </div>
         </div>
     </div>

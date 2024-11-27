@@ -21,3 +21,21 @@
         margin-right: 12px;
     }
 }
+
+.bottom-paginator {
+    background-color: var(--color-button);
+    color: var(--color-main);
+}
+
+.bottom-paginator.active {
+    background-color: var(--color-main);
+    color: var(--color-button);
+}
+
+.container {
+    background-color: var(--color-background);
+}
+
+.alert-field {
+    background-color: var(--color-secondary-light);
+}

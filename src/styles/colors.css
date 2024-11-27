@@ -1,0 +1,54 @@
+:root {
+    /* Ana Renkler (Primary Colors) */
+    --color-primary: #0052cc;
+    --color-primary-light: #3385ff;
+    --color-primary-dark: #003399;
+
+    /* İkincil Renkler (Secondary Colors) */
+    --color-secondary: #ff5722;
+    --color-secondary-light: #ff8a50;
+    --color-secondary-dark: #e64a19;
+
+    /* Nötr Renkler (Neutral Colors) */
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-gray-100: #f5f5f5;
+    --color-gray-200: #e0e0e0;
+    --color-gray-300: #bdbdbd;
+
+    /* Durum Renkleri (State Colors) */
+    --color-success: #4caf50;
+    --color-warning: #ff9800;
+    --color-error: #f44336;
+    --color-info: #2196f3;
+
+    /* Palette Elements */
+    --color-background: #f9f4ef;
+    /*f9f4ef*/
+    --color-headline: #020826;
+    --color-paragraph: #716040;
+    --color-button: #8c7851;
+    --color-button-text: #fffffe;
+
+    /* Palette Illustration */
+    --color-stroke: #020826;
+    --color-main: #fffffe;
+    --color-highlight: #8c7851;
+    --color-secondary-light: #eaddcf;
+    --color-tertiary: #f25042;
+
+    /* Palette White Elements */
+    --color-background-white: #fffffe;
+    --color-card-background: #eaddcf;
+
+}
+
+.button-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.alert-success {
+    background-color: var(--color-success);
+    color: var(--color-white);
+}
