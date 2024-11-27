@@ -1,0 +1,40 @@
+@media (max-width: 768px) {
+    #categoryMenu {
+        margin: 0px;
+        padding: 0px;
+        height: 60px;
+    }
+
+    .bottom-nav {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: #fff;
+        border-top: 1px solid #ccc;
+        z-index: 1000;
+    }
+
+    .bottom-nav .nav-item {
+        text-align: center;
+        padding: 10px 5px;
+        color: #555;
+    }
+
+    .bottom-nav .nav-item i {
+        display: block;
+        font-size: 20px;
+    }
+
+    .bottom-nav .nav-item span {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 767px) {
+    i {
+        display: none;
+    }
+}

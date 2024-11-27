@@ -1,6 +1,23 @@
 @media (max-width: 768px) {
     .container {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 0px;
+        margin-top: -15px !important;
+    }
+
+    #cartSummary {
+        display: none;
+    }
+
+    .btn-group {
+        margin-left: 50%;
+        transform: translate(-50%, -50%);
+        margin-bottom: 40px;
+    }
+
+    .alert-warning {
+        margin-left: 12px;
+        margin-right: 12px;
     }
 }

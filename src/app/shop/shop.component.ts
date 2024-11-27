@@ -3,7 +3,7 @@ import { ProductRepository } from '../model/product.repository';
 import { Product } from '../model/product.model';
 import { Category } from '../model/category.model';
 import { NavbarComponent } from "./navbar/navbar.component";
-import { NgFor } from '@angular/common';
+import { NgClass, NgFor } from '@angular/common';
 import { CartSummaryComponent } from "./cart-summary/cart-summary.component";
 import { FormsModule } from '@angular/forms';
 import { ProductListComponent } from "./product-list/product-list.component";
@@ -11,7 +11,7 @@ import { CategoryListComponent } from "./category-list/category-list.component";
 @Component({
   selector: 'shop',
   standalone: true,
-  imports: [NavbarComponent, NgFor, CartSummaryComponent, CartSummaryComponent, FormsModule, ProductListComponent, CategoryListComponent],
+  imports: [NavbarComponent, NgFor, CartSummaryComponent, CartSummaryComponent, FormsModule, ProductListComponent, CategoryListComponent, NgClass],
   templateUrl: './shop.component.html',
   styleUrl: './shop.component.css'
 })
@@ -21,9 +21,14 @@ export class ShopComponent implements OnInit {
   public productsPerPage = 6;
   public selectedPage = 1;
   public selectedProducts: Product[] = []; // Aktif sayfadaki ürünler
+  screenWidth = window.innerWidth;
 
   constructor(
-    private productRepository: ProductRepository) { }
+    private productRepository: ProductRepository) {
+    window.addEventListener('resize', () => {
+      this.screenWidth = window.innerWidth;
+    })
+  }
 
   ngOnInit(): void {
     this.updateSelectedProducts();

@@ -11,10 +11,10 @@
 </div>
 
 
-<div class="row">
+<div class="row list-products">
     <div id="list-products" class="col-md-4" *ngFor="let p of products">
-        <div class="card mb-3">
-            <img src="/assets/img/{{p.imageUrl}}" alt="{{p.name}}" class="w-50 mx-auto">
+        <div class="card mb-3 margin-product">
+            <img src="/assets/img/{{p.imageUrl}}" alt="{{p.name}}" class="w-50 mx-auto image-product">
             <div class="card-body">
                 <h4 class="card-title">
                     <a routerLink="" (click)="displayDetails(p)" class="product-link text-black">{{p.name}}</a>

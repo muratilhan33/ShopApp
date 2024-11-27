@@ -2,12 +2,12 @@ import { Component, EventEmitter, Output } from '@angular/core';
 import { Category } from '../../model/category.model';
 import { ShopComponent } from '../shop.component';
 import { CategoryRepository } from '../../model/category.repository';
-import { NgFor } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 
 @Component({
   selector: 'category-list',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor, NgIf],
   templateUrl: './category-list.component.html',
   styleUrl: './category-list.component.css'
 })

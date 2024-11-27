@@ -1,7 +1,11 @@
-<div class="list-group">
-    <button (click)="changeCategory()" class="list-group-item list-group-item-action">
-        Tüm kategoriler
+<div id="categoryMenu" class="list-group bottom-nav">
+    <button (click)="changeCategory()" class="list-group-item list-group-item-action nav-item">
+        <i class="fas fa-home"></i><span>Tüm kategoriler</span>
     </button>
-    <button *ngFor="let category of categories" class="list-group-item list-group-item-action"
-        (click)="changeCategory(category)" [class.active]="category==selectedCategory">{{category.name}}</button>
+    <button *ngFor="let category of categories" class="list-group-item list-group-item-action nav-item"
+        (click)="changeCategory(category)" [class.active]="category==selectedCategory">
+        <i class="fa-solid fa-mobile" *ngIf="category.name=='Telefon'"></i>
+        <i class="fa-solid fa-laptop" *ngIf="category.name=='Bilgisayar'"></i>
+        <i class="fa-solid fa-plug" *ngIf="category.name=='Elektronik'"></i>
+        <span> {{category.name}} </span></button>
 </div>

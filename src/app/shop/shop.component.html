@@ -3,11 +3,11 @@
     <div class="row">
         <div class="col-3">
 
-            <cart-summary></cart-summary>
+            <cart-summary id="cartSummary"></cart-summary>
 
             <category-list (category)="getCategory($event)"></category-list>
         </div>
-        <div class="col-9">
+        <div class="col-9" id="products" [ngClass]="{'col-12': screenWidth<769, 'col-9': screenWidth>768}">
             <div class="row">
                 <div class="col-md-12">
                     <div class="alert alert-warning">
