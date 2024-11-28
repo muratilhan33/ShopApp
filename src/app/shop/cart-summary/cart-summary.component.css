@@ -9,3 +9,13 @@
     border-color: var(--color-secondary-light);
     color: var(--color-paragraph);
 }
+
+.button-cart {
+    background-color: var(--color-button);
+    color: var(--color-main);
+}
+
+.button-cart:hover {
+    background-color: var(--color-main);
+    color: var(--color-button);
+}

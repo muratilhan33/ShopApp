@@ -6,6 +6,7 @@ import { Order } from '../../model/order.model';
 import { OrderRepository } from '../../model/order.repository';
 import { FormsModule, NgForm, NgModel } from '@angular/forms';
 import { Cart } from '../../model/cart.model';
+import { CartService } from '../../model/cart.service';
 
 @Component({
   selector: 'checkout',
@@ -18,9 +19,15 @@ export class CheckoutComponent {
   orderSent: Boolean = false;
   submitted: Boolean = false;
   order: Order;
+  cart: Cart = new Cart;
 
-  constructor(private orderRepository: OrderRepository, private cart: Cart) {
+  constructor(private orderRepository: OrderRepository, private cartService: CartService) {
+    this.cart = cartService.getCart();
     this.order = new Order(0, '', '', '', '', '', false, this.cart);
+  }
+
+  ngOnInit(): void {
+    this.cart = this.cartService.getCart();
   }
 
   submitOrder(form: NgForm) {

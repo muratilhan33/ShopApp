@@ -2,10 +2,10 @@
 <div class="container pt-100 mb-5">
     <h1 class="mb-2">Alışveriş Sepetiniz</h1>
     <div class="row">
-        <div class="col-8">
+        <div class="col-8 cart-products">
 
             <ng-container *ngIf="cart.itemCount>0">
-                <table class="table table-hover">
+                <table class="table table-hover cart-table">
                     <thead>
                         <tr>
                             <th></th>
@@ -23,12 +23,12 @@
                             </td>
                             <td>{{item.product.name}}</td>
                             <td>{{item.product.price! | priceFormat}}</td>
-                            <td><input type="text" class="form-control" [value]="item.quantity"
+                            <td><input type="text" class="form-control input-quantity" [value]="item.quantity"
                                     (change)="cart.updateQuantity(item.product, $any($event.target).value)"
                                     style="width: 50px;"></td>
                             <td>{{item.quantity * item.product.price! | priceFormat }}</td>
                             <td>
-                                <button class="btn btn-danger btn-sm" (click)="cart.removeItem(item.product.id!)">
+                                <button class="btn button-remove btn-sm" (click)="cart.removeItem(item.product.id!)">
                                     <i class="fa fa-times fa-fw"></i>
                                 </button>
                             </td>
@@ -38,7 +38,7 @@
             </ng-container>
 
             <ng-container *ngIf="cart.itemCount==0">
-                <div class="alert alert-warning mt-3">
+                <div class="alert alert-cart mt-3">
                     Sepetinizde ürün bulunmamaktadır.<br>
                     <button [routerLink]="['/shop']" routerLinkActive="router-link-active"
                         class="btn btn-link p-0">Alışverişe devam etmek için
@@ -63,8 +63,8 @@
                     </table>
 
                     <div>
-                        <button routerLink="/shop" class="btn btn-outline-primary btn-sm">Alışverişe devam et</button>
-                        <button routerLink="/checkout" class="btn btn-outline-primary btn-sm ms-2">Ödemeye geç</button>
+                        <button routerLink="/shop" class="btn button-shopping btn-sm">Alışverişe devam et</button>
+                        <button routerLink="/checkout" class="btn button-payment btn-sm ms-2">Ödemeye geç</button>
                     </div>
 
                 </div>

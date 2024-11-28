@@ -4,10 +4,10 @@
     <div *ngIf="orderSent">
         <h2>Teşekkür ederiz.</h2>
         <p>Siparişiniz kayıt edildi.</p>
-        <button class="btn btn-outline-primary" routerLink="/shop">Alışverişe devam et</button>
+        <button class="btn button-shopping" routerLink="/shop">Alışverişe devam et</button>
     </div>
 
-    <form *ngIf="!orderSent" #form="ngForm" (ngSubmit)="submitOrder(form)" class="m-4">
+    <form *ngIf="!orderSent && cart.itemCount>0" #form="ngForm" (ngSubmit)="submitOrder(form)" class="m-4">
         <div class="form-group">
             <label>Name</label>
             <input class="form-control" #name="ngModel" name="name" [(ngModel)]="order.name" required>
@@ -39,8 +39,21 @@
         </div>
 
         <div class="text-center mt-3">
-            <button class="btn btn-primary" type="submit">Siparişi tamamla</button>
-            <button class="btn btn-primary ms-2" routerLink="/shop">Alışverişe devam et</button>
+            <button class="btn button-checkout" type="submit">Siparişi tamamla</button>
+            <button class="btn button-shopping ms-2" routerLink="/shop">Alışverişe devam et</button>
         </div>
     </form>
+
+
+    <ng-container *ngIf="cart.itemCount<1 && !orderSent">
+        <div class="alert alert-cart mt-3">
+            Sepetinizde ürün bulunmamaktadır.<br>
+            <button [routerLink]="['/shop']" routerLinkActive="router-link-active" class="btn btn-link p-0">Alışverişe
+                devam
+                etmek için
+                tıklayınız.</button>
+        </div>
+
+    </ng-container>
+
 </div>

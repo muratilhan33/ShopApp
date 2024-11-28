@@ -1,7 +1,34 @@
 .form-control.ng-touched.ng-invalid {
-    border-left: 2px solid #a94442;
+    border-left: 2px solid var(--color-tertiary);
 }
 
 .form-control.ng-dirty.ng-valid {
-    border: 2px solid #42a948;
+    border-left: 2px solid #42a948;
+}
+
+.form-control {
+    background-color: var(--color-main);
+    color: var(--color-headline);
+}
+
+label,
+h2,
+p {
+    color: var(--color-headline);
+}
+
+.button-shopping,
+.button-checkout {
+    background-color: var(--color-button);
+    color: var(--color-main);
+}
+
+.button-shopping:hover,
+.button-checkout:hover {
+    background-color: var(--color-main);
+    color: var(--color-button);
+}
+
+.text-danger {
+    color: var(--color-tertiary) !important;
 }
