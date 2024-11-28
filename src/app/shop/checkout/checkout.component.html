@@ -9,30 +9,30 @@
 
     <form *ngIf="!orderSent && cart.itemCount>0" #form="ngForm" (ngSubmit)="submitOrder(form)" class="m-4">
         <div class="form-group">
-            <label>Name</label>
+            <label>Ad soyad</label>
             <input class="form-control" #name="ngModel" name="name" [(ngModel)]="order.name" required>
             <span *ngIf="submitted && name.invalid" class="text-danger">Lütfen adınızı girin.</span>
         </div>
 
-        <div class="form-group">
-            <label>Address</label>
+        <div class="form-group mt-2">
+            <label>Adres</label>
             <input class="form-control" #address="ngModel" name="address" [(ngModel)]="order.address" required>
             <span *ngIf="submitted && address.invalid" class="text-danger">Lütfen adres bilginizi girin.</span>
         </div>
 
-        <div class="form-group">
-            <label>City</label>
+        <div class="form-group mt-2">
+            <label>Şehir</label>
             <input class="form-control" #city="ngModel" name="city" [(ngModel)]="order.city" required>
             <span *ngIf="submitted && city.invalid" class="text-danger">Lütfen şehir bilginizi girin.</span>
         </div>
 
-        <div class="form-group">
-            <label>Phone</label>
+        <div class="form-group mt-2">
+            <label>Telefon</label>
             <input class="form-control" #phone="ngModel" name="phone" [(ngModel)]="order.phone" required>
             <span *ngIf="submitted && phone.invalid" class="text-danger">Lütfen telefon numaranızı girin.</span>
         </div>
 
-        <div class="form-group">
+        <div class="form-group mt-2">
             <label>Email</label>
             <input class="form-control" #email="ngModel" name="email" [(ngModel)]="order.email" required>
             <span *ngIf="submitted && email.invalid" class="text-danger">Lütfen email adresinizi girin.</span>

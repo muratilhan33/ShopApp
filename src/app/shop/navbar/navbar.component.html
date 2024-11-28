@@ -18,29 +18,30 @@
             <!-- Sol Menüler -->
             <ul class="navbar-nav me-auto navbar-nav-scroll">
                 <li class="nav-item">
-                    <a [routerLink]="['/shop']" routerLinkActive="router-link-active" class="nav-link">Home</a>
+                    <a [routerLink]="['/shop']" routerLinkActive="router-link-active" class="nav-link ms-2">Ana
+                        sayfa</a>
                 </li>
                 <li class="nav-item">
-                    <a [routerLink]="['/shop']" class="nav-link" routerLinkActive="active">Products</a>
+                    <a [routerLink]="['/shop']" class="nav-link ms-2" routerLinkActive="active">Ürünler</a>
                 </li>
             </ul>
 
             <!-- Sağ Menüler -->
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a [routerLink]="['/cart']" routerLinkActive="active-link" class="nav-link">Cart</a>
+                    <a [routerLink]="['/cart']" routerLinkActive="active-link" class="nav-link">Sepet</a>
                 </li>
                 <li class="nav-item" *ngIf="isLoggedIn">
-                    <a routerLink="/admin/main" class="nav-link">Admin Panel</a>
+                    <a routerLink="/admin/main" class="nav-link ms-2">Admin paneli</a>
                 </li>
                 <li class="nav-item">
-                    <a routerLink="/admin/main" *ngIf="!isLoggedIn" class="nav-link">Login</a>
+                    <a routerLink="/admin/main" *ngIf="!isLoggedIn" class="nav-link ms-2">Giriş</a>
                 </li>
                 <li class="nav-item" *ngIf="!isLoggedIn">
-                    <a routerLink="" class="nav-link">Register</a>
+                    <a routerLink="" class="nav-link ms-2">Kayıt ol</a>
                 </li>
                 <li class="nav-item" *ngIf="isLoggedIn">
-                    <a href="#" class="nav-link">Logout</a>
+                    <a href="#" class="nav-link ms-2">Çıkış yap</a>
                 </li>
             </ul>
         </div>

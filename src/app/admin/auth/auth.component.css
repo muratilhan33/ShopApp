@@ -1,0 +1,36 @@
+.button-login {
+    background-color: var(--color-button);
+    color: var(--color-button-text);
+}
+
+.button-login:hover {
+    background-color: var(--color-button-text);
+    color: var(--color-button);
+    border: 1px solid var(--color-button);
+}
+
+.button-back {
+    background-color: var(--color-background);
+    color: var(--color-button);
+    border: 1px solid var(--color-button);
+}
+
+.button-back:hover {
+    background-color: var(--color-main);
+    color: var(--color-paragraph);
+}
+
+input.form-control {
+    background-color: var(--color-main);
+}
+
+.login {
+    width: 400px;
+    background-color: var(--color-secondary-light);
+    border-radius: 10px;
+    color: var(--color-stroke);
+}
+
+label {
+    color: var(--color-stroke);
+}

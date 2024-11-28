@@ -1,16 +1,16 @@
 <h5>
-    {{editing ? "Edit" : "Create"}} Category
+    Kategori {{editing ? "Düzenle" : "Oluştur"}}
 </h5>
 
-<form #form="ngForm" (ngSubmit)="save(form)">
+<form #form="ngForm" class="mt-2" (ngSubmit)="save(form)">
     <div class="form-group">
-        <label>Name</label>
-        <input class="form-control" name="name" [(ngModel)]="category.name">
+        <label>Kategori adı</label>
+        <input class="form-control mt-2" name="name" [(ngModel)]="category.name">
     </div>
 
 
-    <button type="submit" class="btn button-new mt-2">
-        {{editing ? "Edit" : "Create" }} Category
+    <button type="submit" class="btn button-new mt-3">
+        Kategori {{editing ? "Düzenle" : "Oluştur" }}
     </button>
-    <button type="button" class="btn button-edit mt-2 ms-2" routerLink="/admin/main/categories">Cancel</button>
+    <button type="button" class="btn button-edit mt-3 ms-2" routerLink="/admin/main/categories">İptal</button>
 </form>
