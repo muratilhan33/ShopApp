@@ -27,8 +27,19 @@ p {
 .button-checkout:hover {
     background-color: var(--color-main);
     color: var(--color-button);
+    border: 1px solid var(--color-button);
 }
 
 .text-danger {
     color: var(--color-tertiary) !important;
+}
+
+.alert-cart {
+    background-color: var(--color-secondary-light);
+    border-color: var(--color-secondary-light);
+    color: var(--color-paragraph);
+}
+
+.alert-cart button {
+    color: var(--color-tertiary);
 }

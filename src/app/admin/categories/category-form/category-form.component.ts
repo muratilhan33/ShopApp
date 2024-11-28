@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { Category } from '../../../model/category.model';
 import { CategoryRepository } from '../../../model/category.repository';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-category-form',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, RouterLink],
   templateUrl: './category-form.component.html',
   styleUrl: './category-form.component.css'
 })

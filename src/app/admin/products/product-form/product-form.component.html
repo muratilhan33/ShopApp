@@ -23,9 +23,9 @@
         <textarea class="form-control" name="description" [(ngModel)]="product.description"></textarea>
     </div>
 
-    <button type="submit" class="btn btn-primary mt-2">
+    <button type="submit" class="btn button-new mt-2">
         {{editing ? "Edit" : "Create" }} Product
     </button>
 
-    <button class="btn btn-outline-primary mt-2" routerLink="/admin/main/products">Cancel</button>
+    <button class="btn button-edit mt-2 ms-2" routerLink="/admin/main/products">Cancel</button>
 </form>

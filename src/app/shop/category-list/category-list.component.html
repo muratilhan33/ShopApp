@@ -1,5 +1,6 @@
 <div id="categoryMenu" class="list-group bottom-nav">
-    <button (click)="changeCategory()" class="list-group-item list-group-item-action nav-item">
+    <button (click)="changeCategory()" [class.active]="selectedCategory==null || selectedCategory==undefined"
+        class="list-group-item list-group-item-action nav-item">
         <i class="fas fa-home"></i><span>Tüm kategoriler</span>
     </button>
     <button *ngFor="let category of categories" class="list-group-item list-group-item-action nav-item"

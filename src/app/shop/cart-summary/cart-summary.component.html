@@ -1,7 +1,7 @@
 <div id="cartSummary" class="alert alert-success">
     <span *ngIf="cart.itemCount>0">
         Sepetinizde {{cart.itemCount}} adet ürün bulunmaktadır.<br>
-        Toplam {{cart.total| priceFormat}}<br>
+        Toplam <span class="label-total">{{cart.total| priceFormat}}</span><br>
         <button class="btn button-cart mt-3" [routerLink]="['/cart']" routerLinkActive="router-link-active">Sepete
             git</button>
     </span>

@@ -1,0 +1,39 @@
+td,
+th {
+    background-color: var(--color-card-background) !important;
+    color: var(--color-stroke);
+    border-color: var(--color-highlight);
+}
+
+.button-new {
+    background-color: var(--color-button);
+    color: var(--color-button-text);
+}
+
+.button-new:hover {
+    background-color: var(--color-button-text);
+    color: var(--color-button);
+    border: 1px solid var(--color-button);
+}
+
+.button-edit {
+    background-color: var(--color-button-text);
+    color: var(--color-button);
+    border: 1px solid var(--color-button);
+}
+
+.button-edit:hover {
+    background-color: var(--color-button);
+    color: var(--color-button-text);
+}
+
+.button-delete {
+    background-color: var(--color-tertiary);
+    color: var(--color-button-text);
+}
+
+.button-delete:hover {
+    background-color: var(--color-button-text);
+    color: var(--color-tertiary);
+    border: 1px solid var(--color-tertiary);
+}

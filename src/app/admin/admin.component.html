@@ -4,20 +4,22 @@
         <div class="col bg-primary p-2 text-white">Admin Panel</div>
     </div>
 
+
+
     <div class="container">
         <div class="row mt-5">
             <div class="col-3">
-                <button routerLinkActive="active" routerLink="/admin/main/products"
-                    class="btn btn-outline-info w-100">Products</button>
-                <button routerLinkActive="active" routerLink="/admin/main/categories"
-                    class="btn btn-outline-info w-100">Categories</button>
-                <button routerLinkActive="active" routerLink="/admin/main/orders"
-                    class="btn btn-outline-info w-100">Orders</button>
-                <button class="btn btn-outline-danger w-100 mt-2" (click)="logout()">Logout</button>
+                <div class="list-group">
+                    <button routerLinkActive="active" routerLink="/admin/main/products"
+                        class="category-list w-100 list-group-item list-group-item-action">Products</button>
+                    <button routerLinkActive="active" routerLink="/admin/main/categories"
+                        class="category-list w-100 list-group-item list-group-item-action">Categories</button>
+                    <button routerLinkActive="active" routerLink="/admin/main/orders"
+                        class="category-list w-100 list-group-item list-group-item-action">Orders</button>
+                </div>
             </div>
             <div class="col-9">
                 <router-outlet></router-outlet>
-
             </div>
         </div>
     </div>

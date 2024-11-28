@@ -1,0 +1,17 @@
+.category-list {
+    background-color: var(--color-secondary-light) !important;
+    color: var(--color-paragraph) !important;
+    border-color: var(--color-highlight);
+}
+
+button.category-list.active {
+    background-color: var(--color-highlight) !important;
+    border-color: var(--color-button) !important;
+    color: var(--color-button-text) !important;
+}
+
+.category-list:hover {
+    background-color: var(--color-paragraph) !important;
+    color: var(--color-secondary-light) !important;
+    transition: 0.2s;
+}
