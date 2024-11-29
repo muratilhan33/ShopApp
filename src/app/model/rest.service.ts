@@ -10,7 +10,7 @@ import { Order } from './order.model';
 })
 export class RestService {
 
-  baseUrl: string = "http://localhost:3500/";
+  baseUrl: string = "https://shopapp-web-service.onrender.com/";
   token: string | null = null;
   headerToken: HttpHeaders | null = null;
 

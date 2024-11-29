@@ -17,13 +17,11 @@ p {
     color: var(--color-headline);
 }
 
-.button-shopping,
 .button-checkout {
     background-color: var(--color-button);
     color: var(--color-main);
 }
 
-.button-shopping:hover,
 .button-checkout:hover {
     background-color: var(--color-main);
     color: var(--color-button);
@@ -42,4 +40,15 @@ p {
 
 .alert-cart button {
     color: var(--color-tertiary);
+}
+
+.button-shopping {
+    background-color: var(--color-background);
+    color: var(--color-button);
+    border: 1px solid var(--color-button);
+}
+
+.button-shopping:hover {
+    background-color: var(--color-main);
+    color: var(--color-paragraph);
 }
