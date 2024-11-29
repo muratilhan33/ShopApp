@@ -1,14 +1,14 @@
 import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { AuthService } from '../../model/auth.service';
 import { NavbarComponent } from "../../shop/navbar/navbar.component";
 
 @Component({
   selector: 'app-auth',
   standalone: true,
-  imports: [FormsModule, NgIf, NavbarComponent],
+  imports: [FormsModule, NgIf, NavbarComponent, RouterLink],
   templateUrl: './auth.component.html',
   styleUrl: './auth.component.css'
 })
