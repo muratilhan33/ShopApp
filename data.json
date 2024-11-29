@@ -46,7 +46,7 @@
       "price": 43199,
       "imageUrl": "iphone-14.jpg",
       "description": "Her yönüyle muhteşem.",
-      "category": "Bilgisayar"
+      "category": "Telefon"
     },
     {
       "id": "7",
@@ -54,7 +54,7 @@
       "price": 53400,
       "imageUrl": "iphone-13-pro.jpg",
       "description": "Süper telefon",
-      "category": "Bilgisayar"
+      "category": "Telefon"
     },
     {
       "id": "8",
@@ -102,7 +102,7 @@
       "price": 43199,
       "imageUrl": "iphone-14.jpg",
       "description": "Her yönüyle muhteşem.",
-      "category": "Bilgisayar"
+      "category": "Telefon"
     },
     {
       "id": "14",
@@ -110,6 +110,70 @@
       "price": 53400,
       "imageUrl": "iphone-13-pro.jpg",
       "description": "Süper telefon",
+      "category": "Telefon"
+    },
+    {
+      "id": "15",
+      "name": "Asus Zenbook 14",
+      "price": 25598,
+      "imageUrl": "Asus_Zenbook_14.png",
+      "description": "Güçlü ve kompakt Zenbook 14 yalnızca 16,9 mm inceliğinde ve 1,39 kg hafif, zarif, tamamen modern ve nefes kesici yeni bir tasarıma sahip. Geniş 16:10 2.8K ekrandan mükemmel görseller yaşayacaksınız, %100 sRGB renk gamı sunan 400 nit'e kadar renk doğruluğu sağlayan bir ekran. Intel® Core™ i5-13500H İşlemci, Intel Iris ® Xe grafik kartı, 8 GB RAM ve 512 GB PCIe 4.0 SSD üstün performans sunar ve uzun ömürlü 75 Wh pil vardır. Olağanüstü ses için akıllı bir amplifikatör tarafından desteklenen bir Dolby Atmos ses sistemi vardır. Kullanıcı merkezli tasarım, güç düğmesinde parmak izi sensörüyle tek dokunuşla oturum açma, yeni ASUS ErgoSense klavye ve verimli ASUS NumberPad 2.0'ı içeriyor. Cesur yeni kapak tasarımı, zamansız Kintsugi işçiliğinden ilham almıştır ve iki yeni renkte mevcuttur: Ponder Blue, Aqua Celadon ve Foggy Silver. Zenbook 14, taşınabilir mükemmellik için yeni ölçüttür.",
+      "category": "Bilgisayar"
+    },
+    {
+      "id": "16",
+      "name": "MacBook Air M3",
+      "price": 40499,
+      "imageUrl": "Macbook-Air-M3.png",
+      "description": "MacBook Air akıcı bir şekilde çalışmanız ve oyun oynamanız için ihtiyacınız olan gücü sunuyor. Üstelik bu süper portatif laptop şimdi M3 çip ile daha da muhteşem becerilere ve gelişmiş yapay zeka özelliklerine sahip. Ve 18 saate kadar pil ömrü sayesinde gün boyunca her şeyin üstesinden gelebilmenize imkan veriyor.◊",
+      "category": "Bilgisayar"
+    },
+    {
+      "id": "17",
+      "name": "Lenovo Ideapad Slim 3",
+      "price": 16999,
+      "imageUrl": "lenovo-ideapad-slim-3.png",
+      "description": "IdeaPad Slim 3i dizüstü bilgisayar, hareket halindeyken iş, okul veya eğlence için idealdir. Intel® Core™ işlemcilerden güç alan bu 15.6inç cihaz, tüm uygulamalarınız için hızlı yanıt hızına sahiptir, böylece istediğiniz şekilde çoklu görev yapabilirsiniz. Ayrıca, büyük miktarda depolama alanı, multimedya kitaplığınızı ödün vermeden PC'nize kaydedebileceğiniz anlamına gelir.",
+      "category": "Bilgisayar"
+    },
+    {
+      "id": "18",
+      "name": "Casper Nirvana X600",
+      "price": 22999,
+      "imageUrl": "casper-nirvana-x600.png",
+      "description": "Intel Core™ ve AMD Ryzen™ işlemciler ve Intel® Iris® Xe /AMD Radeon® RX grafik kartı teknolojisine sahip Casper Nirvana X600 laptop bilgisayar, güçlü performansın yanı sıra 180° açılabilir yapısı ile maksimum verimlilik sunar.",
+      "category": "Bilgisayar"
+    },
+    {
+      "id": "19",
+      "name": "Asus Zenbook 14",
+      "price": 25598,
+      "imageUrl": "Asus_Zenbook_14.png",
+      "description": "Güçlü ve kompakt Zenbook 14 yalnızca 16,9 mm inceliğinde ve 1,39 kg hafif, zarif, tamamen modern ve nefes kesici yeni bir tasarıma sahip. Geniş 16:10 2.8K ekrandan mükemmel görseller yaşayacaksınız, %100 sRGB renk gamı sunan 400 nit'e kadar renk doğruluğu sağlayan bir ekran. Intel® Core™ i5-13500H İşlemci, Intel Iris ® Xe grafik kartı, 8 GB RAM ve 512 GB PCIe 4.0 SSD üstün performans sunar ve uzun ömürlü 75 Wh pil vardır. Olağanüstü ses için akıllı bir amplifikatör tarafından desteklenen bir Dolby Atmos ses sistemi vardır. Kullanıcı merkezli tasarım, güç düğmesinde parmak izi sensörüyle tek dokunuşla oturum açma, yeni ASUS ErgoSense klavye ve verimli ASUS NumberPad 2.0'ı içeriyor. Cesur yeni kapak tasarımı, zamansız Kintsugi işçiliğinden ilham almıştır ve iki yeni renkte mevcuttur: Ponder Blue, Aqua Celadon ve Foggy Silver. Zenbook 14, taşınabilir mükemmellik için yeni ölçüttür.",
+      "category": "Bilgisayar"
+    },
+    {
+      "id": "20",
+      "name": "MacBook Air M3",
+      "price": 40499,
+      "imageUrl": "Macbook-Air-M3.png",
+      "description": "MacBook Air akıcı bir şekilde çalışmanız ve oyun oynamanız için ihtiyacınız olan gücü sunuyor. Üstelik bu süper portatif laptop şimdi M3 çip ile daha da muhteşem becerilere ve gelişmiş yapay zeka özelliklerine sahip. Ve 18 saate kadar pil ömrü sayesinde gün boyunca her şeyin üstesinden gelebilmenize imkan veriyor.◊",
+      "category": "Bilgisayar"
+    },
+    {
+      "id": "21",
+      "name": "Lenovo Ideapad Slim 3",
+      "price": 16999,
+      "imageUrl": "lenovo-ideapad-slim-3.png",
+      "description": "IdeaPad Slim 3i dizüstü bilgisayar, hareket halindeyken iş, okul veya eğlence için idealdir. Intel® Core™ işlemcilerden güç alan bu 15.6inç cihaz, tüm uygulamalarınız için hızlı yanıt hızına sahiptir, böylece istediğiniz şekilde çoklu görev yapabilirsiniz. Ayrıca, büyük miktarda depolama alanı, multimedya kitaplığınızı ödün vermeden PC'nize kaydedebileceğiniz anlamına gelir.",
+      "category": "Bilgisayar"
+    },
+    {
+      "id": "22",
+      "name": "Casper Nirvana X600",
+      "price": 22999,
+      "imageUrl": "casper-nirvana-x600.png",
+      "description": "Intel Core™ ve AMD Ryzen™ işlemciler ve Intel® Iris® Xe /AMD Radeon® RX grafik kartı teknolojisine sahip Casper Nirvana X600 laptop bilgisayar, güçlü performansın yanı sıra 180° açılabilir yapısı ile maksimum verimlilik sunar.",
       "category": "Bilgisayar"
     }
   ],
@@ -123,8 +187,8 @@
       "name": "Bilgisayar"
     },
     {
-      "name": "Elektronik",
-      "id": "mNUy0DD"
+      "id": "3",
+      "name": "Elektronik"
     }
   ],
   "orders": [
