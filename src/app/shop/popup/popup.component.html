@@ -1,7 +1,8 @@
 <div class="popup-overlay" (click)="onOverlayClick()" *ngIf="showPopup">
     <div class="popup" (click)="stopPropagation($event)">
         <h2>Bilgilendirme</h2>
-        <p>Eğer sayfa düzgün görüntülenmiyorsa, 1-2 dakika sonra tekrar deneyiniz.</p>
+        <p>Bu uygulamadaki JSON veriler Render'in ücretsiz planı üzerinden çekildiği için ürünler ilk açılışta düzgün
+            görüntülenmeyebilir. Eğer ürünler düzgün görüntülenmiyorsa, 1-2 dakika sonra tekrar deneyiniz.</p>
         <button (click)="closePopup()" class="btn button-delete">Kapat</button>
     </div>
 </div>
